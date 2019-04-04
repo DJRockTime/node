@@ -35,6 +35,10 @@ module.exports = {
                 test: /\.js$/, use: 'babel-loader', exclude: /node_modules/
             },
             {
+                test: /\.vue$/,
+                use: 'vue-loader'
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             },
@@ -50,14 +54,12 @@ module.exports = {
             {
                 test: /\.(ttf|eot|svg|woff|woff2)$/, use: 'url-loader'
             },
-            {
-                test: /\.vue$/, use: 'vue-loader'
-            }
         ]
     },
     resolve: {
         alias: {
             // 'vue$': 'vue/dist/vue.js'
+            
         }
     }
 }
